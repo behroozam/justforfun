@@ -1,0 +1,1388 @@
+
+<!doctype html>
+<html lang="fa" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="داستان یک انقلابی اتفاقی">
+      
+      
+        <meta name="author" content="Jadi">
+      
+      
+        <link rel="canonical" href="https://linuxstory.ir/os_7/">
+      
+      
+        <link rel="prev" href="../os_6/">
+      
+      
+        <link rel="next" href="../os_8/">
+      
+      
+      <link rel="icon" href="../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.14">
+    
+    
+      
+        <title>تولد یک سیستم‌عامل، بخش هفتم - فقط برای تفریح</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.fad675c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Vazirmatn:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Vazirmatn";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="rtl">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="سرتیتر">
+    <a href=".." title="فقط برای تفریح" class="md-header__button md-logo" aria-label="فقط برای تفریح" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            فقط برای تفریح
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              تولد یک سیستم‌عامل، بخش هفتم
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="جستجو" placeholder="جستجو" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="جستجو">
+        
+        <button type="reset" class="md-search__icon md-icon" title="بازنشانی" aria-label="بازنشانی" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            راه‌اندازی جستجو
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/jadijadi/justforfun" title="رفتن به مخزن" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="هدایت" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="فقط برای تفریح" class="md-nav__button md-logo" aria-label="فقط برای تفریح" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    فقط برای تفریح
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/jadijadi/justforfun" title="رفتن به مخزن" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    مقدمه
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    حمایت
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../download/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    دریافت کتاب
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    تولد یک نرد
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            تولد یک نرد
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nerd_bd_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    تولد یک نرد، بخش یکم
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nerd_bd_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    تولد یک نرد، بخش دوم
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nerd_bd_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    تولد یک نرد، بخش سوم
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nerd_bd_4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    تولد یک نرد، بخش چهارم
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nerd_bd_5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    تولد یک نرد، بخش پنجم
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nerd_bd_6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    تولد یک نرد، بخش ششم
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nerd_bd_7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    تولد یک نرد، بخش هفتم
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    تولد یک سیستم‌عامل
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            تولد یک سیستم‌عامل
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../os_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    تولد یک سیستم‌عامل، بخش یکم
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../os_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    تولد یک سیستم‌عامل، بخش دوم
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../os_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    تولد یک سیستم‌عامل، بخش سوم
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../os_4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    تولد یک سیستم‌عامل، بخش چهارم
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../os_5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    تولد یک سیستم‌عامل، بخش پنجم
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../os_6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    تولد یک سیستم‌عامل، بخش ششم
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    تولد یک سیستم‌عامل، بخش هفتم
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../os_8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    تولد یک سیستم‌عامل، بخش هشتم
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../os_9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    تولد یک سیستم‌عامل، بخش نهم
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../os_10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    تولد یک سیستم‌عامل، بخش دهم
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../os_11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    تولد یک سیستم‌عامل، بخش یازدهم
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../os_12/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    تولد یک سیستم‌عامل، بخش دوازدهم
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    فرش قرمز
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            فرش قرمز
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ball_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    فرش قرمز، بخش یکم
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ball_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    فرش قرمز، بخش دوم
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ball_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    فرش قرمز، بخش سوم
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ball_4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    فرش قرمز، بخش چهارم
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ball_5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    فرش قرمز، بخش پنجم
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ball_6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    فرش قرمز، بخش ششم
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ball_7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    فرش قرمز، بخش هفتم
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ball_8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    فرش قرمز، بخش هشتم
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ball_9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    فرش قرمز، بخش نهم
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ball_10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    فرش قرمز، بخش دهم
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ball_11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    فرش قرمز، بخش یازدهم
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ball_12/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    فرش قرمز، بخش دوازدهم
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    مقالات
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            مقالات
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../road_ahead/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    راه جذاب پیش رو
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wealth/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    شهرت و ثروت
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../why_opensource_is_important/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    چرا متن‌باز مهم است
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../meaning_of_life_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    معنای زندگی ۲
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../end_of_control/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    پایانی بر کنترل
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intelectual_property/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    دارایی معنوی
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="فهرست موضوعات">
+  
+  
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>تولد یک سیستم‌عامل، بخش هفتم</h1>
+
+<p>آری لمکه باید آدم خوش‌بینی بوده باشد. او مدت‌ها پیش از اینکه من چیزی برای ارائه داشته باشم، مسیر اف.تی.پی. ftp.funer.fi را ساخت. من کلمه رمز را داشتم و همه چیز تنظیم شده بود تا در موقع مناسب به سیستم وارد شوم و فایل‌ها را در آن‌جا آپلود کنم. حدود چهار ماه طول کشید تا احساس کنم چیزی دارم که می‌توان آن را با جهانیان به اشتراک گذاشت یا حداقل با آری و چند خوره سیستم‌عامل دیگری که گاه‌گداری با آن‌ها ایمیل رد و بدل می‌کردم.</p>
+<p>هدف اصلی من ایجاد سیستم‌عاملی بود که در نهایت بتوانم از آن‌ به عنوان جایگزین مینیکس استفاده کنم. قرار نبود کاری بیشتر از مینیکس انجام دهم. برنامه اولیه این بود که چیزهایی که در مینیکس دوست دارم را تکرار کنم و همین‌طور چند قابلیت دیگر را. برای مثال نه تنها شبیه‌ساز ترمینال مینیکس بد بود که کنترل وظیفه هم نداشت؛ یعنی نمی‌شد در حینی که نیازی به یک برنامه نداشتیم، آن را به پشت زمینه منتقل کنیم. مدیریت حافظه مینیکس هم خیلی ابتدایی بود و در سیستم‌عامل مک هنوز هم همین‌طور است.</p>
+<p>روش نوشتن یک سیستم‌عامل این است که اول کشف کنید فراخوانی‌های سیستمی قرار است چه‌کاری انجام دهند و بعد برنامه‌هایی بنویسید که این وظایف را به شیوه‌ای که شما دوست دارید، عملیاتی کنند. به شکل عمومی، چیزی حدود چند صد فراخوانی سیستمی وجود دارد که بعضی از آن‌ها نیازمند چند تابع گوناگون هستند. البته بعضی‌ها هم ساده‌اند. بعضی از فراخوانی‌های پایه‌ای بسیار پیچیده هستند و پیاده‌سازی آن‌ها نیازمند کلی کار زیربنایی است؛ مثلا فراخوانی‌های سیستمی «خواندن» یا «نوشتن» را در نظر بگیرید. برای خواندن یا نوشتن از دیسک، نیازمند این هستید که قبلا یک درایور دیسک نوشته باشید. حالا «باز کردن» را در نظر بگیرید. باید کل لایه فایل سیستم را بسازید تا یک تابع بتواند اسم فایلی را بگیرد و آن را باز کند. نوشتن «باز کردن» شاید چند ماه کار برد ولی وقتی عملیاتی شد، از همان کد می‌شد در قسمت‌های دیگر هم استفاده کرد.</p>
+<p>این روش توسعه‌ اولیه بود. من از راهنماهای سان یا کتاب‌های دیگر، استانداردها را می‌خواندم و یکی‌یکی فراخوانی‌های سیستمی را انتخاب می‌کردم و سعی می‌کردم توابعی بنویسم که آن‌ها را عملیاتی کنند. کار سخت و طاقت‌فرسایی بود.</p>
+<p>دلیل: هیچ‌چیزی اتفاق نمی‌افتاد، هیچ پیشرفتی را عملا مشاهده نمی‌کردید. می‌توانستید برنامه‌های کوچکی بنویسید که کد تازه نوشته شده را آزمایش کنند ولی عملا چیزی کاربردی‌ از این کدها بیرون نمی‌آمد. بعد از مدتی، دیگر روند انتخاب تک‌تک فراخوانی‌ها از یک فهرست بلندبالا را کنار می‌گذاشتید و احساس می‌کردید که فراخوانی‌ها آن قدر کامل شده‌اند که بتوانید برنامه‌های واقعی را روی آن‌ها اجرا کنید. اولین برنامه‌ای که باید اجرا کنید، <abbr title="Shell همان پوسته متنی است که در سیستم‌عامل‌هایی مانند لینوکس دستورات را داخل آن تایپ می‌کنیم.">پوسته</abbr > است چون اجرای دیگر برنامه‌ها بدون حضور پوسته، بسیار مشکل است. علاوه بر این، پوسته شامل بسیاری از فراخوانی‌های سیستمی‌ای است که دیگر برنامه‌ها هم از آن‌ها استفاده خواهند کرد. پوسته را اجرا کنید و فهرستی از فراخوانی‌هایی را خواهید داشت که باید یک‌به‌یک بنویسیدشان.</p>
+<p>در یونیکس، پوسته به نوعی مادر همه برنامه‌های دیگر است. پوسته آنجاست تا برنامه‌های اجرایی دیگر را اجرا کند (برنامه اجرایی، فایلی است که به شکل ۰ و ۱ به ماشین می‌گوید که چه‌کار کند. هربار که برنامه‌ای را به یک زبان برنامه‌نویسی می‌نویسید، باید آن را از کد منبع به باینری ترجمه کنید). در عین حال این پوسته است که به شما اجازه می‌دهد وارد سیستم شوید. قبول! در یونیکس اولین برنامه‌ای که به شکل سنتی اجرا می‌شود init نام دارد ولی اجرای init به حجم زیادی از زیرساخت نیاز دارد و کنترل‌کننده کل اتفاقاتی است که روی می‌دهند. وقتی چیزی برای اجرا شدن نیست، داشتن init هم لزومی ندارد.</p>
+<p>پس به جای شروع به اجرای init، اولین کاری که <abbr title="Kernel">کرنل</abbr> من می‌کرد، اجرای پوسته بود. من حدود بیست و پنج فراخوانی سیستمی را نوشته بودم و همان طور که گفتم، این اولین برنامه‌ واقعی بود که می‌خواستم اجرا کنم. پوسته چیزی نبود که من آن را نوشته‌ باشم‌. من یکی از پوسته‌های اصلی یونیکس که یکی از مشابه‌های پوسته‌ای به نام پوسته <abbr title="Boune Shell">بورن</abbr > را دانلود کرده و روی دیسک ریخته بودم. این پوسته به عنوان یک نرم‌افزار روی اینترنت در دسترس همه بود و اسمش را از یک شوخی ناجور گرفته بود. کسی که پوسته اصلی را نوشته بود Bourne نام داشت و در نتیجه این مشابه، <abbr title="این شوخی‌ای است با مسیحیانی که بعد از مدت‌ها فکر می‌کنند به تازگی مسیحیت را کشف کرده‌اند و با تولدی دوباره، وظیفه دارند دیگران را نیز متوجه این کشف کنند.">Bourne-Again</abbr> یا به اختصار bash نام گرفته بود.</p>
+<p>وقتی سعی‌ می‌کنید یک برنامه واقعی را از دیسک بارگذاری کنید، بدون شک با یک باگ در درایور دیسک یا برنامه بارگذار مواجه خواهید شد. از آن‌جایی که برنامه بارگذار نمی‌فهمد مشغول چه‌کاری است، همیشه فهرستی از کارهای در حال اقدام را چاپ می‌کند. این بسیار مهم است؛ چون با این روش دقیقا می‌فهمید که اشکال در کجا بروز کرده است.</p>
+<p>من در مرحله‌ای بودم که برنامه‌ام پوسته را از دیسک بارگذاری می‌کرد و هر فراخوانی سیستمی که صدا زده می‌شد؛ ولی من هنوز آن را ننوشته بودم را چاپ می‌کرد. من کامپیوتر را بوت کردم؛ پوسته را اجرا کردم و چیزی شبیه به این ظاهر شد: «فراخوانی سیستمی شماره ۵۱۲ نوشته نشده است.» من صبح و شب به این نوشته‌ها نگاه می‌کردم و فراخوانی‌های جدید ر ا می‌نوشتم و قبلی‌ها را اصلاح می‌کردم. این‌کار بسیار لذت‌بخش‌تر بود از اینکه فهرستی از فراخوانی‌ها را جلویم بگذارم و یکی‌یکی آن‌ها را بنویسم. با این کار، پیشرفت را می‌دیدم.</p>
+<p>اواخر آگوست یا اوایل سپتامبر بود که توانستم پوسته را به طور کامل اجرا کنم. از آن به بعد، همه چیز آسان‌تر شد.</p>
+<p>این مساله بزرگی بود.</p>
+<p>وقتی پوسته را راه‌انداختم، توانستم سریعا چند برنامه را کمپایل کنم. برای مثال پوسته خیلی خیلی پیچیده‌تر از برنامه‌ای مثل cp (کپی) یا I (برای گرفتن فهرست فایل‌ها) بود. هر چیزی که لازم داشتم، بخشی از پوسته بود که قبلا نوشته شده بود و در نتیجه وقتی پوسته راه افتاد، از کمی بالای صفر تا ۱۰۰، در مدت خیلی کمی پیموده شد. گاهی آن قدر همه چیز آماده بود که من احساس کن‌فیکون می‌کردم. قبل از این، هیچ‌چیز کار نمی‌کرد.</p>
+<p>بله! احساس رضایت فوق‌العاده‌ای داشتم. فکر می‌کنم این مهم بود چون آن تابستان به جز کامپیوتر، هیچ کار دیگری نکرده بودم. اغراق نمی‌کنم. از آوریل تا آگوست، بهترین ایام سال در فنلاند است. مردم برای قایق‌سواری به مجمع‌الجزایر می‌روند و در سواحل آفتاب می‌گیرند و در سوناهای تابستانی‌شان وقت می‌گذرانند؛ اما من به سختی می‌توانستم بگویم شب است یا روز و حتی چه موقعی از سال است. آن پرده‌های سیاه و کلفت جلوی نور آفتاب تقریبا بیست‌وچهار ساعته را می‌گرفتند، همین طور جلوی دنیای بیرون را. بعضی روزها -یا شب‌ها؟ از تخت بیرون می‌آمدم و مستقیما به سراغ کامپیوترم که کمتر از نیم‌ متر با تخت فاصله داشت می‌رفتم. در نهایت پدرم شروع کرد تا در این باره که چرا من یک شغل تابستانی نمی‌گیرم،‌ به مادرم غر بزند. مساله برای مادرم مهم نبود: من او را اذیت نمی‌کردم. سارا از اینکه وقتی من آنلاین می‌شدم، خطوط تلفن مدت‌ها مشغول می‌شد، کمی ناراضی بود. احتمالا خودش این جمله را با مراعات کمتری می‌نوشت. اغراق نخواهد بود اگر بگویم که به جز از طریق کامپیوتر، هیچ ارتباطی با دنیای خارج نداشتم. باشه!‌ شاید هفته‌ای یک‌بار دوستی می‌آمد و به پنجره تقه‌ای می‌زد و اگر من مشغول بالا و پایین رفتن در بخش مهمی از کد نبودم، به داخل دعوتش می‌کردم (توجه کنید که مهمان همیشه مرد بود. این قبل از دورانی بود که گیک‌ بودن باحال محسوب شود). ما چای می‌نوشیدیم و در آشپزخانه کوچکمان، یک ساعتی ام.تی.وی. نگاه می‌کردیم. حالا که درست فکر می‌کنم، می‌بینم که گاهی اگر کسی مثل جوکو (که من او را آوونتون صدا می‌زنم که به معنای «قاتل اژدها» است و این خودش داستانی دارد) به پنجره تقه می‌زد، ممکن بود با هم بیرون برویم و آبجویی بخوریم و کمی اسنوکر بازی کنیم؛ اما صادقانه بگویم که در آن دوران هیچ‌چیز دیگری در زندگی من وجود نداشت.</p>
+<p>این را هم بگویم که طی آن دوره به هیچ وجه یک آدم بیچاره رنگ‌پریده نبودم. پوسته، کار می‌کرد و این به آن معنا بود که من پایه‌های یک سیستم‌عامل را نوشته‌ام. این کار مفرح بود.</p>
+<p>با عملیاتی شدن پوسته، شروع کردم به آزمایش برنامه‌های درون‌‌ساخت آن. بعد آن قدر برنامه جدید کمپایل کردم که بتوانم واقعا کار مفیدی انجام دهم. همه چیز را در مینیکس کمپایل می‌کردم و یک پارتیشن هارد را هم اختصاص داده بودم به سیستم‌عامل جدید و پوسته را هم به آن انتقال داده بودم. پیش خودم آن را لینوکس می‌خواندم.</p>
+<p>صادقانه: هیچ‌گاه نمی‌خواستم برنامه را با نام لینوکس منتشر کنم چون این کار به نظرم خودخواهانه می‌آمد. پس اسمی که در نظر گرفته بودم چه بود؟‌ <abbr title="Freax">فریکس</abbr> (گرفتید؟ <abbr title="در انگلیسی به معنی چیزهای عجیب‌وغریب و آدم‌های ناهمگون">Freaks</abbr> با پسوند مشهور x). در حقیقت بعضی از <abbr title="Make File - فایلی که به کمپایلر می‌گوید چگونه باید برنامه خاصی را کمپایل کند.">فایل‌های ساخت</abbr > اولیه -فایل‌هایی که مشخص می‌کنند فایل منبع چگونه باید کمپایل شود- برای تقریبا نیم سال، عبارت فریکس را در خود داشتند. البته این مساله ارزشی هم نداشت چون در آن مرحله اصولا برنامه‌ای برای انتشار عمومی این نرم‌افزار نداشتم.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  برگشت به بالا
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="پاورقی" >
+        
+          
+          <a href="../os_6/" class="md-footer__link md-footer__link--prev" aria-label="قبلی: تولد یک سیستم‌عامل، بخش ششم">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                قبلی
+              </span>
+              <div class="md-ellipsis">
+                تولد یک سیستم‌عامل، بخش ششم
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../os_8/" class="md-footer__link md-footer__link--next" aria-label="بعدی: تولد یک سیستم‌عامل، بخش هشتم">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                بعدی
+              </span>
+              <div class="md-ellipsis">
+                تولد یک سیستم‌عامل، بخش هشتم
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      ترجمه کتاب فقط برای تفریح کاری است از <a href="http://jadi.net">جادی</a> روی <a href="https://github.com/jadijadi/justforfun">گیت هاب</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "navigation.instant", "navigation.instant.progress", "navigation.top", "navigation.footer"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u06a9\u067e\u06cc \u0634\u062f", "clipboard.copy": "\u06a9\u067e\u06cc \u06a9\u0631\u062f\u0646", "search.result.more.one": "1 \u0645\u0648\u0631\u062f \u062f\u06cc\u06af\u0631 \u062f\u0631 \u0627\u06cc\u0646 \u0635\u0641\u062d\u0647", "search.result.more.other": "# \u0645\u0648\u0631\u062f \u062f\u06cc\u06af\u0631 \u062f\u0631 \u0627\u06cc\u0646 \u0635\u0641\u062d\u0647", "search.result.none": "\u0633\u0646\u062f\u06cc \u06cc\u0627\u0641\u062a \u0646\u0634\u062f", "search.result.one": "1 \u0633\u0646\u062f \u06cc\u0627\u0641\u062a \u0634\u062f", "search.result.other": "# \u0633\u0646\u062f \u06cc\u0627\u0641\u062a \u0634\u062f", "search.result.placeholder": "\u0628\u0631\u0627\u06cc \u0634\u0631\u0648\u0639 \u062c\u0633\u062a\u062c\u0648 \u062a\u0627\u06cc\u067e \u06a9\u0646\u06cc\u062f", "search.result.term.missing": "\u0645\u0648\u062c\u0648\u062f \u0646\u06cc\u0633\u062a", "select.version": "\u0627\u0646\u062a\u062e\u0627\u0628 \u0648\u06cc\u0631\u0627\u06cc\u0634"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.cd18aaf1.min.js"></script>
+      
+    
+  </body>
+</html>
